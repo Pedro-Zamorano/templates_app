@@ -4,7 +4,14 @@ import 'package:practice_app/e_commerce_app/theme/colors.dart';
 class InputText extends StatelessWidget {
   final String hintText;
   final IconData icon;
-  const InputText({super.key, required this.hintText, required this.icon});
+  final Color? iconColor;
+
+  const InputText({
+    super.key,
+    required this.hintText,
+    required this.icon,
+    this.iconColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +22,7 @@ class InputText extends StatelessWidget {
         hintText: hintText,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(4)),
         hintStyle: TextStyle(color: greyAdapter, fontWeight: FontWeight.normal),
-        prefixIconColor: greyAdapter,
+        prefixIconColor: iconColor ?? greyAdapter,
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: greyAdapter2),
         ),

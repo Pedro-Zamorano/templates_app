@@ -58,6 +58,9 @@ class LoginScreen extends StatelessWidget {
               bgColor: Colors.white,
               textColor: greyAdapter,
             ),
+
+            SizedBox(height: 10),
+
             Button(
               icon: Icon(
                 Icons.facebook_outlined,
@@ -68,6 +71,8 @@ class LoginScreen extends StatelessWidget {
               bgColor: Colors.white,
               textColor: greyAdapter,
             ),
+
+            SizedBox(height: 10),
 
             GestureDetector(
               onTap: () {},
@@ -80,6 +85,9 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
+
+            SizedBox(height: 3),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -1,2 +1,9 @@
+export 'package:practice_app/e_commerce_app/presentation/screens/account.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/cart.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/explore.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/home.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/offer.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/dashboard.dart';
+export 'package:practice_app/e_commerce_app/presentation/screens/register.dart';
 export 'package:practice_app/e_commerce_app/presentation/screens/login.dart';
 export 'package:practice_app/e_commerce_app/presentation/screens/splash.dart';
