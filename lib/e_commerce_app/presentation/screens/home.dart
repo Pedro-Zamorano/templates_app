@@ -6,10 +6,37 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(80),
+        child: _DashboardAppBar(),
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
+        child: Column(
+          children: [
+            // CarouselView section
+            SizedBox(
+              width: double.infinity,
+              height: 150,
+              child: CarouselSection(),
+            ),
+
+            // Category section
+
+            // Flash Sale section
+
+            // Mega Sale section
+
+            // Static Image section
+
+            // Normal Products section
+          ],
+        ),
+      ),
+    );
   }
 }
-
 
 class _DashboardAppBar extends StatelessWidget {
   @override
@@ -36,6 +63,26 @@ class _DashboardAppBar extends StatelessWidget {
           icon: Icon(Icons.notifications_outlined, color: greyAdapter),
         ),
       ],
+    );
+  }
+}
+
+class CarouselSection extends StatelessWidget {
+  const CarouselSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselView(
+      itemExtent: double.infinity,
+      scrollDirection: Axis.horizontal,
+      elevation: 4,
+      padding: EdgeInsets.all(1),
+      shape: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+      enableSplash: true,
+      itemSnapping: true,
+      children: List<Widget>.generate(10, (int index) {
+        return Container(color: Colors.red, width: double.infinity, height: 50);
+      }),
     );
   }
 }

@@ -30,7 +30,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _myScreens.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(                                                              
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -64,6 +64,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800),
         unselectedFontSize: 10,
         unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w300),
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }
