@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:practice_app/e_commerce_app/e_commerce_exports.dart';
+import 'package:practice_app/e_store_app/presentation/screens/home.dart';
+import 'package:practice_app/e_store_app/providers/quantity_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => QuantityProvider())],
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
@@ -10,6 +17,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: DashboardScreen());
+    return const MaterialApp(home: HomePage());
   }
 }
