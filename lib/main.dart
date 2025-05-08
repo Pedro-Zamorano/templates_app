@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice_app/e_store_app/presentation/screens/home.dart';
+import 'package:practice_app/bottom_navbar.dart';
 import 'package:practice_app/e_store_app/providers/quantity_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +17,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomePage());
+    return const MaterialApp(home: BottomNavbarPage());
   }
 }
